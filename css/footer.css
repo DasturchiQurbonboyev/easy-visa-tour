@@ -1,0 +1,136 @@
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* xarita oldin passiv bo'ladi */
+  }
+
+  .map-container:hover iframe {
+    pointer-events: auto; /* hoverda interaktiv bo'ladi */
+  }
+
+  iframe{
+    border-radius: 10px;
+  }
+
+  footer{
+    padding: 50px 0;
+    background: #000;
+}
+
+footer *{
+    color: white;
+}
+
+footer img{
+    width: 100%;
+  }
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 50px;
+}
+
+.footer .footer__title{
+    margin-top: 0;
+}
+.footer h4{
+    margin-block: 15px;
+}
+
+.footer__contact__box{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+.footer__contact__box>div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer__contact__icon{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+  
+
+
+.footer__request{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer__request h2{
+    font-size: 35px;
+}
+
+.footer__request *{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    /* color: red; */
+}
+
+.footer__request input, .footer__request textarea{
+    padding: 10px 0 10px 20px;
+    color: #5e5757;
+    outline: none;
+}
+
+.footer__request textarea{
+    height: 175px;
+    resize: none;
+}
+
+.footer__request button{
+    border-radius: 10px;
+    background: red;
+    cursor: pointer;
+}
+
+
+@media (max-width:1236px) {
+    .footer__location{
+        order: 3;
+    }
+}
+
+@media (max-width:1000px) {
+    .footer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__location {
+        grid-column: span 2; /* 3-karta butun qatorni egallaydi */
+      }
+}
+
+@media (max-width:700px) {
+    .footer__request h2{
+        font-size: 28px;
+    }
+}
+
+@media (max-width:560px) {
+    .footer{
+        grid-template-columns: 1fr;
+    }
+    .footer__location {
+        grid-column: span 1; /* 3-karta butun qatorni egallaydi */
+      }
+      .map-container{
+        height: 200px;
+      }
+}

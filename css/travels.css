@@ -1,0 +1,12 @@
+#travels{
+    /* height: 100vh; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/travels/image.png);
+    color: white;
+}
+
+.travels__img{
+    width: 100%;
+}

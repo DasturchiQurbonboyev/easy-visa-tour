@@ -1,0 +1,47 @@
+@import url(../javascript/popular-swiper.js);
+
+.populars__title {
+    position: relative;
+    font-size: 50px;
+
+}
+.populars__title::before{
+    position: absolute;
+    bottom: -15px;
+    content: "";
+    width: 48px;
+    height: 5px;
+    background: red;
+}
+.populars__swiper {
+    margin-top: 50px;
+}
+
+.popular__swiper__card {
+    text-align: center;
+}
+.popular__card__img {
+    width: 180px;
+    height:180px;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+.popular__card__name {
+    font-weight: bold;
+    margin-top: 0;
+    text-align: center;
+}
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.swiper-scrollbar {
+}
+
+
+@media (max-width:800px) {
+    
+}

@@ -1,0 +1,163 @@
+header {
+    position: relative;
+    padding: 20px 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+header::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    background-image: url(../images/navbar/nav-bg.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.5;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__logo img {
+    width: 100px;
+}
+.nav__lists {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    transition: 0.3s;
+}
+
+.nav__item select {
+    border: none;
+    background: transparent;
+}
+
+.nav__link {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    transition: 0.5s;
+    position: relative;
+}
+
+.nav__link:hover{
+    color: red;
+}
+
+.nav__link::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    border-radius: 5px;
+    background: red;
+    transition: 0.3s;
+}
+
+.nav__link:hover.nav__link::before{
+    width: 100%;
+}
+
+.res__nav__list{
+    display: none;
+}
+
+.nav__menu{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav__menu a{
+    color: black;
+    font-size: 14px;
+}
+
+.res__nav__menu{
+    position: relative;
+    z-index: 1000;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.nav__menu a{
+    position: relative;
+    z-index: 1000;
+}
+
+
+
+.res__nav__menu span{
+    width: 100%;
+    height: 3px;
+    background: red;
+}
+
+ul.open__nav__lists{
+    top: 0;
+}
+
+.res__nav__menu{
+    position: relative;
+}
+
+.res__nav__menu span{
+    transition: .3s;
+}
+
+.res__nav__menu.nav__btn span:nth-child(1) {
+    position: absolute;
+    transform: rotate(45deg);
+    top: 7px;
+
+  }
+  
+  .res__nav__menu.nav__btn span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .res__nav__menu.nav__btn span:nth-child(3) {
+    position: absolute;
+    transform: rotate(-225deg);
+    bottom: 10px;
+  }
+
+
+@media (max-width:900px) {
+    header{
+        padding: 0;
+    }
+    .nav__lists{
+        top: -100%;
+        position: fixed;
+        background: white;
+        width: 100%;
+        left: 0;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .res__nav__list{
+        display: block;
+    }
+}

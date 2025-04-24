@@ -1,0 +1,93 @@
+:root {
+    --shadow1: 0 0 0 0 #0000;
+    --shadow2: 0 0 0 0 #0000;
+    --shadow3: 0 4px 10px rgba(0, 0, 0, 0.25);
+    --shadow4: 0 2px 4px hsla(0, 0%, 100%, 0.1);
+  }
+
+.section__title {
+}
+.counters {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 30px;
+}
+.counter__card {
+    position: relative;
+    max-width: 350px;
+    height: 280px;
+    width: 100%;
+    border-radius: 35px 35px 0 0;
+    box-shadow: var(--shadow1), var(--shadow2), var(--shadow3), var(--shadow4);
+}
+
+.counter__card::before{
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    height: 5px;
+    background: red;
+    width: 100%;
+}
+
+.counter__top {
+    border-radius: 35px 35px 0 0;
+    height: 200px;
+    overflow: hidden;
+}
+
+.counter__img{
+    width: 100%;
+    transform: scale(1);
+    transition: 0.5s;
+    height: 100%;
+
+}
+
+.counter__card:hover .counter__img{
+    transform: scale(1.3);
+}
+.counter__about {
+    height: 80px;
+    position: relative;
+    line-height: 80px;
+}
+.counter__name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    padding-left: 20px;
+}
+.counter__flag {
+    position: absolute;
+    transform: translateY(-130%);
+    border-radius: 15px;
+    right: 5px;
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    box-shadow: var(--shadow1), var(--shadow2), var(--shadow3), var(--shadow4);
+}
+
+@media (max-width:1050px) {
+    .counters {
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 20px;
+    }
+
+    .counter__card{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+@media (max-width:700px) {
+    .counters{
+    grid-template-columns: 1fr;
+    }
+    .counter__name {
+        font-size: 18px;
+    }
+
+}

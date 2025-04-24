@@ -1,0 +1,103 @@
+:root {
+    --dynamic-height: 55vw;
+  }
+  
+  .hero {
+    height: var(--dynamic-height);
+    /* background: rgb(161, 125, 125); */
+  }
+
+  #hero{
+    padding-top: 100px;
+  }
+
+  /*---------------- Swipwer start------- */
+
+  .hero .swiper, 
+  .hero .swiper-wrapper,
+  .hero .swiper-slide,
+  .hero__swiper__one,
+  .hero__swiper__two,
+  .hero__swiper__three{
+    height: 100%;
+  }
+
+  .hero .swiper-button-next, .hero .swiper-button-prev{
+    display: none;
+  }
+
+.hero__swiper__one{
+  background-image: url(../images/hero/bg-1.png);
+}
+
+.hero__swiper__two{
+  background-image: url(../images/hero/bg-2.png);
+}
+
+.hero__swiper__three{
+  background-image: url(../images/hero/bg-3.png);
+}
+
+.hero__swiper__one,
+.hero__swiper__two,
+.hero__swiper__three{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__swiper__title{
+  max-width: 900px;
+  line-height: 1.2;
+  font-size: 48px;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(0, 0,0,0.5);
+}
+
+.hero .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  border: 2px solid white;
+  background: red;
+}
+
+.hero span.swiper-pagination-bullet{
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  background: #000;
+  opacity: 1;
+}
+
+/*------------ Swiper End ---------------*/
+
+
+
+
+
+@media (max-width:900px) {
+  #hero{
+    padding-top: 60px;
+  }
+
+  .hero__swiper__title{
+    font-size: 30px;
+  }
+}
+
+@media (max-width:620px) {
+  .hero__swiper__title{
+    font-size: 20px;
+  }
+}
+
+@media (max-width:400px) {
+  .hero__swiper__title{
+    font-size: 16px;
+  }
+}

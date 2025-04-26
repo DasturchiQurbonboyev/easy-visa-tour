@@ -45,6 +45,24 @@
     padding-left: 30px;
   }
 
+  @media (max-width:800px) {
+    #services{
+      padding-top: 250px;
+    }
+  }
+
+  @media (max-width:600px) {
+    #services{
+      padding-top: 100px;
+    }
+  }
+
+  @media (max-width:460px) {
+    #services{
+      padding-top: 250px;
+    }
+  }
+
   @media (max-width:400px) {
     .services__mini__title{
         font-size: 16px;

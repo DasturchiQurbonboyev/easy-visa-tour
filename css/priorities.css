@@ -109,6 +109,9 @@
     .priorities__numbers__box h2{
         font-size: 60px;
     }
+    .priorities__box{
+        gap: 50px;
+    }
 }
 
 @media (max-width:500px) {
@@ -126,6 +129,7 @@
     }
     .priorities__box{
         grid-template-columns: repeat(3, 1fr);
+        gap: 70px;
     }
     .priorities__numbers__box{
         grid-template-columns: 1fr;
@@ -135,5 +139,9 @@
 @media (max-width:350px) {
     .priorities__box{
         grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .priorities__item{
+        padding: 15px;
     }
 }
